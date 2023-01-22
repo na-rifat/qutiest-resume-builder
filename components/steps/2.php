@@ -1,4 +1,4 @@
-<?php use qt\core\HTML; ?>
+<?php use qt\core\HTML;?>
 <div class="step">
     <div class="tips">
         <p class="step-subtitle">UP NEXT:</p>
@@ -15,10 +15,14 @@
                     sure to include keywords from the job posting. This will make your resume more
                     attractive to recruiters.</span></li>
 
-            <div class="checkbox"><input id="hideTips" type="checkbox"><label for="hideTips">Don’t show me tips pages in
-                    the
-                    future.</label></div>
         </ul>
+        <div class="checkbox"><input id="hideTips" type="checkbox"><label for="hideTips">Don’t show me tips pages in
+                the
+                future.</label></div>
+        <div class="btn-grp">
+            <a href="#" class="btn-back"><i class="fas fa-arrow-left"></i></a>
+            <a href="#" class="btn-next">ENTER MY WORK EXPERIENCE</a>
+        </div>
     </div>
     <div class="form">
         <h2>Work Experience</h2>
@@ -49,21 +53,21 @@
         <div class="input-grp">
             <div class="input">
                 <label for="company_start_month">Start Date</label>
-                <?php echo HTML::months_dropdown('company_start_month')  ?>
+                <?php echo HTML::months_dropdown( 'company_start_month' ) ?>
             </div>
             <div class="input">
                 <label for="company_start_year"></label>
-                <?php echo HTML::year_dropdown('company_start_year', 1930, date('Y'))  ?>
+                <?php echo HTML::year_dropdown( 'company_start_year', 1930, date( 'Y' ) ) ?>
             </div>
         </div>
         <div class="input-grp">
             <div class="input">
                 <label for="company_end_month">End Date</label>
-                <?php echo HTML::months_dropdown('company_end_month')  ?>
+                <?php echo HTML::months_dropdown( 'company_end_month' ) ?>
             </div>
             <div class="input">
                 <label for="company_end_year"></label>
-                <?php echo HTML::year_dropdown('company_end_year', 1930, date('Y'))  ?>
+                <?php echo HTML::year_dropdown( 'company_end_year', 1930, date( 'Y' ) ) ?>
             </div>
         </div>
         <div class="input-grp">

@@ -11,6 +11,7 @@ defined( 'ABSPATH' ) or exit;
 abstract class Assets {
     use FUNC;
 
+    public $localize_handle = false;
     // Define dependencies
     public $deps = [
         'js'  => [
@@ -104,6 +105,10 @@ abstract class Assets {
     public function extract_file( $file, $path, $url ) {
         $file_meta = explode( '.', $file );
 
+        if ( ! $this->localize_handle ) {
+            $this->localize_handle = $this->textdomain() . "-dist-$file_meta[0]";
+        }
+
         return [
             'name'    => $file_meta[0],
             'props'   => $file_meta,
@@ -175,10 +180,10 @@ abstract class Assets {
      * @return void
      */
     public function localize_scripts() {
-        wp_localize_script( $this->textdomain() . '-dist-main', $this->textdomain(), [
-            'blogname'   => get_option( 'blogname' ),
-            'site_url'   => site_url(),
-            'ajax_url'   => admin_url( 'admin-ajax.php' ),
+        wp_localize_script( $this->localize_handle, 'qt_vars', [
+            'blogname' => get_option( 'blogname' ),
+            'site_url' => site_url(),
+            'ajax_url' => admin_url( 'admin-ajax.php' ),
         ] );
 
     }

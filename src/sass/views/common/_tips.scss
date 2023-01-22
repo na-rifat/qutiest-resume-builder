@@ -1,22 +1,28 @@
 .tips {
     ul {
         list-style-type: none;
+        margin-bottom: 30px;
 
+        li {
+            display: flex;
+            gap: 12px;
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+            color: #333;
+        }
         .tip-icon {
             height: 40px;
             width: 40px;
+            min-height: 40px;
+            min-width: 40px;
             border-radius: 8px;
-            float: left;
             margin-right: 16px;
             margin-top: 3px;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
+            justify-content: center;
             justify-content: center;
             position: relative;
             padding: 0;
@@ -25,5 +31,58 @@
                 color: #55a1e8;
             }
         }
+
+        &.counter {
+            counter-reset: section;
+            li {
+                &::before {
+                    height: 40px;
+                    width: 40px;
+                    min-height: 40px;
+                    min-width: 40px;
+                    background: #fff;
+                    border-radius: 8px;
+                    counter-increment: section;
+                    content: counter(section);
+                    display: inline-block;
+                    font-size: 17px;
+                    font-weight: 700;
+                    line-height: 40px;
+                    text-align: center;
+                    vertical-align: top;
+                    background: #e3f9f2;
+                    color: #56b78a;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+
+    .step-subtitle {
+        color: #a0a5dd;
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .privacy-alert {
+        color: #333;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-top: 20px;
+        width: 372px;
+
+        a {
+            color: #03acbb;
+        }
+    }
+
+    [type="checkbox"] {
+        margin-left: 0!important;
     }
 }

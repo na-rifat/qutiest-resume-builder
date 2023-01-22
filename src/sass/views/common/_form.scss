@@ -15,10 +15,11 @@
             display: flex;
             flex-flow: column;
             align-items: flex-start;
+            margin: 10px 0;
         }
 
         [type="text"],
-        [type=email],
+        [type="email"],
         select {
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -30,13 +31,12 @@
             border: 1px solid #ccc;
             font-family: raleway, Arial, times new roman, Times, sans-serif;
             font-size: 14px;
-            margin: 10px auto;
             padding: 5px 10px 6px;
             position: relative;
             outline: none;
             @include transition;
 
-            &:focus{
+            &:focus {
                 border: 1px solid $color-blue;
             }
         }

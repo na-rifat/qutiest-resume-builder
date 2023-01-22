@@ -1,4 +1,5 @@
 .resume-form {
+    margin: 50px 0;
     h2 {
         font-size: 36px;
         font-weight: 800;
@@ -12,5 +13,45 @@
         line-height: 22px;
         margin-bottom: 20px;
         color: #333;
+    }
+
+    .leftcol {
+        width: 32%;
+    }
+
+    .btn-grp {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .btn-next {
+        background: #006645;
+        font-size: 16px;
+        font-weight: 800;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        text-align: center;
+        padding: 12px 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+        border-radius: 3px;
+        border: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .btn-back {
+        padding: 12px 20px;
+        background: #e9e9ff;
+        color: #6f7bd6;
+    }
+
+    .step {
+        .tips,
+        .form {
+            display: none;
+        }
     }
 }

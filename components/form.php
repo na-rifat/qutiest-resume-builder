@@ -1,11 +1,8 @@
 <section class="resume-form">
     <div class="container">
         <div class="wrapper">
-            <div class="col50 leftcol">
-                <h2 class="title">Contact Info</h2>
-                <p class="subtitle">This information will be on your resume header. Include at least your name and email
-                    address.
-                </p>
+            <div class="leftcol">
+               
 
                 <form action="#" method="POST">
                     <?php require_once 'steps/1.php' ?>
