@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    height: 100%;
+}
+body {
+    margin: 0;
+    height: 100%;
+}
+main {
+    display: block;
+}

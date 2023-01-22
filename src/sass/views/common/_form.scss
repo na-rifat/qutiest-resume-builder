@@ -1,0 +1,44 @@
+.form {
+    label {
+        color: #333;
+        margin: 15px 0 8px;
+        line-height: 16px;
+        font-weight: normal;
+    }
+
+    .input-grp {
+        display: flex;
+        gap: 15px;
+        align-items: flex-end;
+
+        .input {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+        }
+
+        [type="text"],
+        [type=email],
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            height: 40px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-family: raleway, Arial, times new roman, Times, sans-serif;
+            font-size: 14px;
+            margin: 10px auto;
+            padding: 5px 10px 6px;
+            position: relative;
+            outline: none;
+            @include transition;
+
+            &:focus{
+                border: 1px solid $color-blue;
+            }
+        }
+    }
+}

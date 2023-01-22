@@ -1,0 +1,10 @@
+@import "./normalize";
+@import "./responsive";
+@import "./container";
+@import "./common";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Declear variables
+$transition: 0.3s all ease;
+$color-blue: #38b6ff;

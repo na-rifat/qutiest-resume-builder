@@ -1,0 +1,41 @@
+// Configurations
+@import "./config/config";
+
+// libraries
+// @import "./libraries/aos";
+// @import "./libraries/slick";
+
+// Layout
+@import "./views/layout/all";
+// components
+@import "./views/common/resume-form";
+@import "./views/common/tips";
+@import "./views/common/form";
+
+/* width */
+// ::-webkit-scrollbar {
+//     width: 8px;
+// }
+
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: #f1f1f1;
+// }
+
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: $color-dark-blue;
+//     border-radius: 4px;
+// }
+
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: #555;
+// }
+
+// body {
+//     overflow: hidden auto;
+// }
+// #primary {
+//     margin-top: 60px;
+// }

@@ -1,0 +1,24 @@
+{
+    "name": "qutiest/seo_mall",
+    "type": "wordpress-theme",
+    "description": "Custom developed theme for IQ3 Connect",
+    "keywords": [
+        "WordPress",
+        "Themes"
+    ],
+    "homepage": "https://github.com/Automattic/_s",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=5.6",
+        "htmlburger/carbon-fields": "3.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "qrb\\": "./inc/controller",
+            "qt\\core\\": "./inc/core"
+        },
+        "files": [
+            "functions.php"
+        ]
+    }
+}
