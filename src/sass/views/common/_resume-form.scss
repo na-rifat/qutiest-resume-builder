@@ -1,5 +1,4 @@
 .resume-form {
-    margin: 50px 0;
     h2 {
         font-size: 36px;
         font-weight: 800;
@@ -41,17 +40,51 @@
         border: 0;
         display: flex;
         justify-content: center;
+        width: 100%;
     }
     .btn-back {
         padding: 12px 20px;
-        background: #e9e9ff;
-        color: #6f7bd6;
+        background: #f6f6f6;
+        color: #333;
+        @include transition;
+
+        &:hover,
+        &.active {
+            background-color: #e3e3e7;
+            color: #000;
+        }
     }
 
     .step {
         .tips,
-        .form {
+        .form,
+        .summery {
             display: none;
+            padding: 50px 0;
+            min-height: calc(100vh - 120px);
+            position: relative;
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: right;
+                background-size: contain;
+                z-index: -1;
+            }
+
+            .show-additional {
+                cursor: pointer;
+                margin-bottom: 7px;
+                color: #03acbb;
+                font-size: 14px;
+                i {
+                    margin-right: 5px;
+                }
+            }
         }
     }
 }

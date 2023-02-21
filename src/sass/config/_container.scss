@@ -30,16 +30,14 @@
 
     &:not(.fixed) {
         @include responsive(1400, 1660) {
-            width: 1366px;
+            width: 1110;
         }
 
-        @include responsive(1660, 1800) {
-            width: 1620px;
-        }
+        // @include responsive(1660, 1800) {
+        //     width: 1620px;
+        // }
     }
-
 }
-
 
 // Header footer container
 .hf-container {
@@ -56,7 +54,8 @@
 }
 
 @media (min-width: 767px) {
-    .hf-container {}
+    .hf-container {
+    }
 }
 
 @media (min-width: 768px) {

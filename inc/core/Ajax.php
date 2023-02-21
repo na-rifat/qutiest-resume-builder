@@ -4,10 +4,9 @@ namespace qt\core;
 
 defined( 'ABSPATH' ) or exit;
 
-
 abstract class Ajax {
     use FUNC;
-    
+
     public function __construct() {
 
     }
@@ -15,7 +14,7 @@ abstract class Ajax {
     /**
      * Register an action
      *
-     * @param [type] $action
+     * @param  [type] $action
      * @return void
      */
     public function register( $action ) {
@@ -29,7 +28,7 @@ abstract class Ajax {
      * @return void
      */
     public static function verify_nonce() {
-        if ( !wp_verify_nonce( self::var( 'nonce' ),self::var( 'action' ) ) ) {
+        if ( ! wp_verify_nonce( self::var ( 'nonce' ), self::var ( 'action' ) ) ) {
             wp_send_json_error(
                 [
                     'msg' => __( 'Invalid token!', self::textdomain() ),
@@ -38,5 +37,7 @@ abstract class Ajax {
             exit;
         }
     }
+
+    
 
 }

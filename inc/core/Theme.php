@@ -15,7 +15,7 @@ abstract class Theme extends Carbon {
 
     public function add_theme_option( $page, $tabs ) {
         $container = Container::make( 'theme_options', __( $page, $this->textdomain() ) )
-            ->set_icon( 'dashcions-admin-generic' )
+            ->set_icon( 'dashicons-admin-generic' )
             ->set_page_menu_position( 0 );
 
         foreach ( $tabs as $title => $fields ) {

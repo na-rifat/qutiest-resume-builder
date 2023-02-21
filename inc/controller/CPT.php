@@ -8,17 +8,32 @@ defined( 'ABSPATH' ) or exit;
 
 class CPT extends CoreCPT {
     function register() {
-        // $this->create_post_type(
-        //     'resource',
-        //     'resources',
-        //     'resource-category',
-        // );
+        $this->create_post_type(
+            'job',
+            'jobs',
+            'job-category',
+        );
 
-        // $this->create_category(
-        //     'resource-category',
-        //     'resource',
-        //     'Resource category'
-        // );
+        $this->create_category(
+            'job-category',
+            'job',
+            'Job'
+        );
+
+        
+        $this->create_post_type(
+            'experience',
+            'experiences',
+            'experience-category',
+        );
+
+        $this->create_category(
+            'experience-category',
+            'experience',
+            'Experience'
+        );
+
+
     }
 
     function register_meta() {

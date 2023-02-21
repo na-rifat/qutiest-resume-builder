@@ -24,6 +24,14 @@ abstract class Assets {
 
     public $locales = [];
 
+    function __construct() {
+        add_filter( 'qt_vars', [$this, 'qt_vars'] );
+    }
+
+    public function qt_vars( $vars ) {
+        return $vars;
+    }
+
     public function register() {
         add_action( 'wp_enqueue_scripts', [$this, 'render'], 10 );
         add_action( 'admin_enqueue_scripts', [$this, 'admin_render'], 10 );
@@ -180,11 +188,11 @@ abstract class Assets {
      * @return void
      */
     public function localize_scripts() {
-        wp_localize_script( $this->localize_handle, 'qt_vars', [
+        wp_localize_script( $this->localize_handle, 'qt_vars', apply_filters( 'qt_vars', [
             'blogname' => get_option( 'blogname' ),
             'site_url' => site_url(),
             'ajax_url' => admin_url( 'admin-ajax.php' ),
-        ] );
+        ] ) );
 
     }
 }
