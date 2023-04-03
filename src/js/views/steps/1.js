@@ -8,6 +8,9 @@ const showAdditional = contact_info.find(`.show-additional`);
 const durShort = 300;
 const durLong = durShort * 2;
 const self_step = steps.eq(0);
+// Slider navigation
+const btnNext = self_step.find(`.btn-next`);
+const btnPrev = self_step.find(`.btn-back`);
 
 showAdditional.on(`click`, function (e) {
     e.preventDefault();
@@ -17,10 +20,6 @@ showAdditional.on(`click`, function (e) {
     let selfInput = self.parents(`.input`).find(`.phone-wrapper`);
     selfInput.fadeIn(durLong);
 });
-
-// Slider navigation
-const btnNext = self_step.find(`.btn-next`);
-const btnPrev = self_step.find(`.btn-back`);
 
 // First screen
 btnNext.eq(0).on(`click`, function (e) {

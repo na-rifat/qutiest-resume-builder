@@ -1,5 +1,5 @@
 <?php use qt\core\HTML;?>
-<div class="step">
+<div class="step education">
     <div class="tips">
         <?php qt_bg_overlay( 'education-bg.svg' )?>
         <div class="container">

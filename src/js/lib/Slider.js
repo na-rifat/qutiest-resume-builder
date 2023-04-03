@@ -1,3 +1,4 @@
+import { setData } from "./QtCookie";
 const durShort = 300;
 const durLong = durShort * 2;
 const parent = $(`.resume-form`);
@@ -36,6 +37,16 @@ export function slideNext(incr = 1) {
                 .addClass(`current`);
         })
         .removeClass(`current`);
+    setData("currentIndex", currentIndex + 1);
+}
+
+export function slideTo(index = 0) {
+    let current = navigationItems.eq(0);
+    current
+        .fadeOut(durShort, function (e) {
+            navigationItems.eq(index).fadeIn(durLong).addClass(`current`);
+        })
+        .removeClass(`current`);
 }
 
 export function slidePrev() {
@@ -49,6 +60,9 @@ export function slidePrev() {
                 .addClass(`current`);
         })
         .removeClass(`current`);
+        
+    console.log(currentIndex);
+    setData("currentIndex", currentIndex - 1);
 }
 
 function calNextIndex(incr = 1) {

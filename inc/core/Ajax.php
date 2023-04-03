@@ -38,6 +38,4 @@ abstract class Ajax {
         }
     }
 
-    
-
 }

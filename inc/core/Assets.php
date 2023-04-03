@@ -34,8 +34,10 @@ abstract class Assets {
 
     public function register() {
         add_action( 'wp_enqueue_scripts', [$this, 'render'], 10 );
-        add_action( 'admin_enqueue_scripts', [$this, 'admin_render'], 10 );
+        // add_action( 'admin_enqueue_scripts', [$this, 'admin_render'], 10 );
+        add_action( 'admin_enqueue_scripts', [$this, 'render'], 10 );
         add_action( 'wp_enqueue_scripts', [$this, 'localize_scripts'], 15 );
+        add_action( 'admin_enqueue_scripts', [$this, 'localize_scripts'], 15 );
         add_action( 'init', [$this, 'admin_bar'] );
         add_action( 'wp_head', [$this, 'admin_topbar_pos'], 999 );
     }

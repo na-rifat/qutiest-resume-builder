@@ -1,7 +1,7 @@
 <?php use qt\core\HTML;?>
 <div class="step work_experience">
     <div class="tips">
-        <?php qt_bg_overlay('work-experience.svg') ?>
+        <?php qt_bg_overlay( 'work-experience.svg' )?>
         <div class="container">
             <div class="wrapper">
                 <div class="leftcol">
@@ -37,7 +37,7 @@
         </div>
     </div>
     <div class="form">
-        <?php qt_bg_overlay('work-experience.svg') ?>
+        <?php qt_bg_overlay( 'work-experience.svg' )?>
         <div class="container">
             <div class="wrapper">
                 <div class="leftcol">
@@ -103,7 +103,7 @@
     </div>
 
     <div class="summery">
-        <?php qt_bg_overlay('work-experience.svg') ?>
+        <?php qt_bg_overlay( 'work-experience.svg' )?>
         <div class="container">
             <div class="wrapper">
                 <div class="leftcol">
@@ -122,7 +122,9 @@
                     </div>
                 </div>
                 <div class="rightcol">
-                    
+                    <ul class="experience-list">
+
+                    </ul>
                 </div>
             </div>
         </div>

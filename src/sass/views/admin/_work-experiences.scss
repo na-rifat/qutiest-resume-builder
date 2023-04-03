@@ -1,0 +1,72 @@
+.work-experiences {
+    .col-wrapper {
+        display: flex;
+
+        .left {
+            width: 40%;
+        }
+        .right {
+            width: 100%;
+        }
+    }
+
+    form {
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: column;
+        gap: 15px;
+
+        [type="text"],
+        textarea,
+        select,
+        button {
+            width: 100%;
+            max-width: 400px;
+            padding: 8px 10px;
+        }
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+
+        th,
+        td {
+            padding: 8px 10px;
+        }
+
+        thead {
+            th {
+                background: #2271b1;
+                color: #fff;
+            }
+        }
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background: #fff;
+                }
+                &:nth-child(even) {
+                    background: #dddddd;
+                }
+            }
+
+            td:last-child {
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    .left {
+        border-right: 1px solid #ccc;
+    }
+    .right {
+        padding-left: 20px;
+    }
+}

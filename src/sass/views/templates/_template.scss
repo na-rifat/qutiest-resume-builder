@@ -1,0 +1,12 @@
+.resume-template {
+    width: 748px;
+    min-height: 832px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.32);
+    padding: 60px 50px;
+    margin: 40px 0;
+}
+
+@mixin small_font {
+    font-size: 13px;
+    line-height: 23px;
+}

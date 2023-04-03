@@ -25,6 +25,7 @@ export function autoComplete(list, key, input, delay = 0) {
     }, delay);
 }
 export function qt_dropdown(inp, arr) {
+    if (inp == null) return;
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
     var currentFocus;

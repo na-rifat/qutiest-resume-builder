@@ -70,3 +70,69 @@
         }
     }
 }
+
+.summery {
+    .wrapper {
+        display: flex;
+        gap: 100px;
+        justify-content: space-between;
+    }
+
+    .experience-list {
+        max-width: 440px;
+        /* margin-left: auto; */
+        display: block;
+        float: right;
+        list-style-type: none;
+        background: #fff;
+        // padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 5px -1px #ccc;
+        height: 60%;
+        overflow-y: auto;
+
+        li {
+            padding: 12px 25px;
+            display: flex;
+            gap: 10px;
+            cursor: pointer;
+            @include transition;
+
+            &:hover {
+                background: #f4f4f4;
+            }
+
+            &.added {
+                background: rgba(222, 239, 255, 0.3);
+                .status {
+                    .add {
+                        display: none;
+                    }
+                    .remove {
+                        display: flex;  
+                    }
+                }
+            }
+
+            .status {
+                height: 35px;
+                width: 35px;
+                background: #deefff;
+                color: #55a1e8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 35px;
+                min-height: 35px;
+
+                .remove {
+                    display: none;
+                }
+            }
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #ccc;
+            }
+        }
+    }
+}

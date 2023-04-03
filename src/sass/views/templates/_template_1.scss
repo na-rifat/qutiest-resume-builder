@@ -1,0 +1,136 @@
+.template1 {
+    position: relative;
+
+    &::before {
+        content: "";
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30%;
+        height: 40%;
+        background: #dbcabaff;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 30%;
+        height: 60%;
+        background: #f1e7deff;
+        z-index: -1;
+    }
+
+    .wrapper {
+        display: flex;
+        gap: 22px;
+    }
+
+    .left {
+        padding: 22px 28px;
+        border: 2px solid #ccc;
+        display: flex;
+        flex-flow: column;
+        gap: 30px;
+        background: #fff;
+
+        .img-wrapper {
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+                margin-left: auto;
+                margin-right: auto;
+                width: 190px;
+                height: 190px;
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            text-transform: uppercase;
+            margin: 0px 0px 20px 0;
+        }
+
+        .contact-wrapper {
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    a {
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+
+        .skills-wrapper {
+            ul {
+                margin-left: 20px;
+            }
+        }
+
+        ul {
+            li,
+            a {
+                @include small_font;
+                color: #333;
+            }
+        }
+
+        .reference-wrapper {
+            p {
+                @include small_font;
+                color: #333;
+            }
+        }
+    }
+
+    .right {
+        .self-summary-wrapper {
+            .full-name {
+                font-size: 46px;
+                line-height: 58px;
+                margin-bottom: 0;
+            }
+            .designation {
+                font-size: 18px;
+                margin: 0 0 30px 0;
+                font-weight: normal;
+            }
+            p {
+                color: #333;
+            }
+        }
+
+        .resume-items {
+            h2 {
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+            ul {
+                margin-left: 20px;
+            }
+
+            p,
+            li {
+                color: #333;
+                font-size: 13px;
+            }
+            .resume-item {
+                > div:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+            }
+            .designation {
+                color: #000;
+            }
+        }
+    }
+}
